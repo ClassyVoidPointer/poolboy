@@ -214,8 +214,7 @@ class BaseExecutor:
         """
         Return the size of the pool
         """
-        with RLock():
-            return self.num_workers
+        return self.num_workers
 
 class ThreadPoolExecutor(BaseExecutor):
     def __init__(self, 
